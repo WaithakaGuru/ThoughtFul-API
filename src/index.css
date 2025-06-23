@@ -85,6 +85,10 @@ button.get-advice{
   display: flex;
 }
 
+button.get-advice span{
+  margin-right: 1rem;
+}
+
 button.get-advice:hover{
   background-color: #444;
 }
@@ -95,8 +99,8 @@ button.get-advice:hover{
   border-radius: 50%;
   border: 1rem solid;
   border-top-color: #555;
-  border-bottom-color: darkorange;
-  border-left-color: #111;
+  border-left-color: darkorange;
+  border-bottom-color: #111;
   border-right-color: chocolate;
   margin-right: 1rem;
   animation: spin .5s linear infinite;

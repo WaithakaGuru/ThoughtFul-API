@@ -31,7 +31,7 @@ function Thoughtful() {
     <button className='get-advice' title='Get new advice' onClick={getAdvice}>
       {isLoading ? (
         <>
-          <Loader/> Loading New Thought<span>Ful</span> Advice...
+          <Loader/> Loading New Thought<span>Ful</span>Advice...
         </>
       ) : (
         <>
