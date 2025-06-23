@@ -5,19 +5,18 @@ import Loader from './components/Loader';
 
 function Thoughtful() {
   const [isLoading, setIsLoading] = useState(false);
-  const [advice, setAdvice] = useState("")
+  const [advice, setAdvice] = useState("Alone you go faster, Together you go far")
   const [error , setError] = useState(null);
 
   async function getAdvice(){
     setIsLoading(true);
     try{
-      const response = await fetch("https://ai.adviceslip.com/advice");
+      const response = await fetch("https://api.adviceslip.com/advice");
       const advice = await response.json();
-      setAdvice(advice.slip);
-      if(!response.ok) setError("Something went wrong!! Try again later");
-      console.log(advice.slip);
-    }catch(error){
-      console.log(error);
+      setAdvice(advice.slip.advice);
+    }catch(err){
+      console.log(err);
+      setError("Something went wrong!! Try again later");
     }finally{
       setIsLoading(false);
     }
@@ -26,7 +25,7 @@ function Thoughtful() {
   return (
     <>
     <Header/>
-    <Advice info={advice} error ={error}/>
+    <Advice info={advice} err={error}/>
     <button className='get-advice' title='Get new advice' onClick={getAdvice}>
       {isLoading ? 
         <><Loader/> Loading New Thought<span>Ful</span>Advice...</>

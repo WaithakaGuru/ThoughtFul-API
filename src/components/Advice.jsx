@@ -1,12 +1,13 @@
-export default function Advice ({info, error}) {
+export default function Advice ({info, err}) {
     return (
         <>
             <h2>Thought<span>Ful</span> Advice:</h2>
             <p className="advice">
-                {(error===null) ? 
-                info.advice ?info.advice : "Alone you go faster, Together you go far"
+                {(err !==null) ? (
+                <div className="error">{err}</div>)
                 :
-                <div className="error">{error}</div>}
+                info
+            }
             </p>
         </>
     )
