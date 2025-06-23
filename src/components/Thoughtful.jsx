@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import { Header } from './components/Header';
-import Advice from './components/Advice';
-import Loader from './components/Loader';
+import { Header } from './Header';
+import Advice from './Advice';
+import Loader from './Loader';
 
 function Thoughtful() {
   const [isLoading, setIsLoading] = useState(false);
