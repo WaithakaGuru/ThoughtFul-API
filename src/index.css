@@ -94,9 +94,16 @@ button.get-advice:hover{
   width: 2.5rem; 
   border-radius: 50%;
   border: 1rem solid;
-  border-top-color: #444;
+  border-top-color: #555;
   border-bottom-color: darkorange;
   border-left-color: #111;
   border-right-color: chocolate;
   margin-right: 1rem;
+  animation: spin .5s linear infinite;
+}
+
+@keyframes spin {
+  to{
+    transform: rotate(360deg);
+  }
 }
