@@ -1,17 +1,7 @@
 import { useState } from 'react'
-import { Header } from './Header';
-import Advice from './Advice';
-import Loader from './Loader';
-
-async function fetchAdvise () {
-  try{
-    const response = await fetch("https://api.adviceslip.com/");
-    const advice = response.json();
-    return advice.slip;
-  }catch(error){
-    console.log(error);
-  }
-}
+import { Header } from './components/Header';
+import Advice from './components/Advice';
+import Loader from './components/Loader';
 
 function Thoughtful() {
   const [isLoading, setIsLoading] = useState(true);
