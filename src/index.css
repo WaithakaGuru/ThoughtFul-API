@@ -34,12 +34,12 @@ body{
   min-height: 15rem;
   background-color: #fff;
   border-radius: 1.5rem 0;
+  border: 1px solid #aaa;
   width: 90%;
   max-width: 700px;
   color: #444;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   text-align: center;
-  box-shadow: 0 0 0 .4rem #44444461;
 }
 
 header h1{
@@ -83,6 +83,7 @@ button.get-advice{
   transition: background-color .4s;
   place-items: center;
   display: flex;
+  justify-content: center;
 }
 
 button.get-advice span{
