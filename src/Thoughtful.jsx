@@ -14,7 +14,7 @@ async function fetchAdvise () {
 }
 
 function Thoughtful() {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [advice, setAdvice] = useState("")
   const [error , setError] = useState(null);
 
@@ -31,11 +31,11 @@ function Thoughtful() {
     <button className='get-advice' title='Get new advice' onClick={getAdvice}>
       {isLoading ? (
         <>
-          <Loader /> Loading New Thought<span>Ful</span> Advice...
+          <Loader/> Loading New Thought<span>Ful</span> Advice...
         </>
       ) : (
         <>
-          New Thought<span>Ful</span>Advice
+          New Thought<span>Ful</span> Advice
         </>
       )}
     </button>
